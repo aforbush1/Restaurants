@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/editRestaurants" method="POST">
+        <fieldset style="width: 0px;">
+            <legend>Edit Restaurant:</legend>
+                <input type="hidden" id="Rest_ID" name="Rest_ID" value="<%= myRestaurants[0].Rest_ID %>">
+                <label for="Rest_Name">Restaurant Name:</label>
+                <input type="text" id="Rest_Name" name="Rest_Name" value="<%= myRestaurants[0].Rest_Name %>">
+                <br><br>
+                <label for="Rest_Location">Location:</label>
+                <input type="text" id="Rest_Location" name="Rest_Location" value="<%= myRestaurants[0].Rest_Location %>">
+                <br><br>
+                <label for="Rest_Rating">Rating:</label>
+                <input type="text" id="Rest_Rating" name="Rest_Rating" value="<%= myRestaurants[0].Rest_Rating %>">
+                <br><br>
+                <label for="Rest_Link">Website:</label>
+                <input type="text" id="Rest_Link" name="Rest_Link" value="<%= myRestaurants[0].Rest_Link %>">
+                <br><br>
+                <label for="Rest_Dietary_Description">Dietary Description:</label>
+                <input type="text" id="Rest_Dietary_Description" name="Rest_Dietary_Description" value="<%= myRestaurants[0].Rest_Dietary_Description %>">
+                <br><br>
+                <button type="submit">Save</button>
+        </fieldset>
+    </form>
+</body>
+</html>

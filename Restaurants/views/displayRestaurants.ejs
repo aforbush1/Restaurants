@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label><b>Restaurant Information: </b></label>
+    <br><br>
+    <table style="width: 100%; background-color: antiquewhite; border: 1px solid black;">
+        <thead style="background-color: cornflowerblue; color: white;">
+        <tr>
+            <th style="text-align: left;">Name</th>
+            <th style="text-align: left;">Location</th>
+            <th style="text-align: left;">Rating</th>
+            <th style="text-align: left;">Website Link</th>
+            <th style="text-align: left;">Dietary Description</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody style="font-family: Arial; font-size: 9pt;">
+        <!-- Use ejs with less than sign and percent sign // adding the = pulls data -->
+        <% for (let iCount = 0; iCount < myRestaurants.length; iCount++) { %>
+            <tr>
+                <td><%= myRestaurants[iCount].Rest_Name %></td>
+                <td><%= myRestaurants[iCount].Rest_Location %></td>
+                <td style="text-align: center;"><%= myRestaurants[iCount].Rest_Rating %></td>
+                <td><%= myRestaurants[iCount].Rest_Link %></td>
+                <td><%= myRestaurants[iCount].Rest_Dietary_Description %></td>
+                <td style="text-align: center;">
+                    <form action="/editRestaurants/<%= myRestaurants[iCount].Rest_ID %>" method="GET">
+                        <button type="submit">Edit</button>
+                    </form>
+                </td>
+                <td style="text-align: center;">
+                    <form action="/deleteRestaurants/<%= myRestaurants[iCount].Rest_ID %>" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <br><br>
+    <form action="/addRestaurants" method="GET">
+        <button type="submit">Add Restaurant</button>
+    </form>
+</body>
+</html>
