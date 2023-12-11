@@ -78,4 +78,19 @@ app.get("/", (req, res) => {
         res.render("restaurantHome")
 });
 
+app.post("/submitLogin", (req, res) => {
+
+    //Sets the admin username and password and compares it to the username and password entered in the form
+    const sAdminUsername = 'Admin'
+    const sAdminPassword = 'P3'
+    const username = req.body.username
+    const password = req.body.password
+
+    //If they enter the admin username and password, it will render the admin's display restaurants page where the admin can edit, delete, and view all the data
+    if (username === sAdminUsername && password === sAdminPassword)  
+    {
+        res.render("/displayRestaurants");
+    }
+});
+
 app.listen(port, () => console.log("Server is listening"));
