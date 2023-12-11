@@ -100,4 +100,8 @@ app.get("/login", (req, res) => {
     res.render("login")
 })
 
+app.get("/viewRestaurants", (req, res) => {
+    res.render("viewRestaurants")
+})
+
 app.listen(port, () => console.log("Server is listening"));
