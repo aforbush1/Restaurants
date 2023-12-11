@@ -96,4 +96,8 @@ app.post("/submitLogin", (req, res) => {
     }
 });
 
+app.get("/login", (req, res) => {
+    res.render("login")
+})
+
 app.listen(port, () => console.log("Server is listening"));
