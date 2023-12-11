@@ -22,6 +22,10 @@ const knex = require("knex")({
     }
 });
 
+app.get("/", (req, res) => {
+    res.render("index");
+});
+
 app.get("/displayRestaurants", (req, res) => {
     knex.select().from("restaurants").then( (restaurants) => {
         res.render("displayRestaurants", {myRestaurants : restaurants});
