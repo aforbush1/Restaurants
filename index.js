@@ -1,4 +1,3 @@
-// Hello Josh
 const express = require("express");
 
 let app = express();
