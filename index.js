@@ -100,8 +100,6 @@ app.get("/login", (req, res) => {
     res.render("login")
 })
 
-
-
 app.get("/viewRestaurants", (req, res) => {
     knex.select().from("restaurants").then( (restaurants) => {
         res.render("viewRestaurants", {myRestaurants : restaurants});
