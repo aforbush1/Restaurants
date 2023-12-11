@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+    
+          <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-phone d-flex align-items-center"><span>rhawk7@byu.edu</span></i>
+          </div>
+    
+          <div class="languages d-none d-md-flex align-items-center">
+            <ul>
+              <li><a href="restaurantHome">Return Home</a></li>
+              <li><a href="login">Log In</a></li>
+              <li><a href="displayRestaurants">View Restaurants</a></li>
+              <li><a href="addRestaurants">Add Restaurants</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
     <form action="/addRestaurants" method="post">
         <label for="Rest_Name">Enter Restaurant Name: </label>
         <input type="text" id="Rest_Name" name="Rest_Name">
