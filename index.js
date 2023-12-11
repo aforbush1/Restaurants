@@ -92,7 +92,9 @@ app.post("/submitLogin", (req, res) => {
     //If they enter the admin username and password, it will render the admin's display restaurants page where the admin can edit, delete, and view all the data
     if (username === sAdminUsername && password === sAdminPassword)  
     {
-        res.render("/displayRestaurants");
+        knex.select().from("restaurants").then( (restaurants) => {
+            res.render("viewRestaurants", {myRestaurants : restaurants});
+        });
     }
 });
 
