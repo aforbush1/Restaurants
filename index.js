@@ -100,8 +100,12 @@ app.get("/login", (req, res) => {
     res.render("login")
 })
 
+
+
 app.get("/viewRestaurants", (req, res) => {
-    res.render("viewRestaurants")
-})
+    knex.select().from("restaurants").then( (restaurants) => {
+        res.render("viewRestaurants", {myRestaurants : restaurants});
+    });
+});
 
 app.listen(port, () => console.log("Server is listening"));
