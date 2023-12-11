@@ -93,7 +93,7 @@ app.post("/submitLogin", (req, res) => {
     if (username === sAdminUsername && password === sAdminPassword)  
     {
         knex.select().from("restaurants").then( (restaurants) => {
-            res.render("viewRestaurants", {myRestaurants : restaurants});
+            res.render("displayRestaurants", {myRestaurants : restaurants});
         });
     }
 });
