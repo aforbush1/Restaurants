@@ -22,7 +22,7 @@ const knex = require("knex")({
     }
 });
 
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
     res.render("index");
 });
 
