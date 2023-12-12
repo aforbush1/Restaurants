@@ -1,4 +1,4 @@
-// Authors
+// Authors, Group 2-9
 const express = require("express");
 
 let app = express();
