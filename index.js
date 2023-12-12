@@ -107,7 +107,7 @@ app.get("/login", (req, res) => {
 })
 
 app.get("/viewRestaurants", (req, res) => {
-    knex.select().from("restaurants").then( (restaurants) => {
+    knex.select().from("restaurants").then( (myRestaurants) => {
         res.render("viewRestaurants", {myRestaurants : restaurants});
     });
 });
