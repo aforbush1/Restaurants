@@ -27,61 +27,65 @@
 
   <!-- Template Main CSS File -->
   <link href="https://aforbush1.github.io/Restaurants/views/assets/css/style.css" rel="stylesheet">
-  <link href="#loginPic"></link>
 
-  <!-- =======================================================
-  * Template Name: Restaurantly
-  * Updated: Sep 20 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Added Styles -->
+  <style>
+    #createUserForm {
+      background-color: rgba(26, 24, 20, 0.9);
+      border-radius: 0;
+    }
+
+    #submit {
+      color: #ffffff;
+      padding: 10px 20px;
+      border: 2px solid #c7a668;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: rgba(199, 166, 104, 0);
+      transition: background-color 0.3s;
+    }
+
+    #submit:hover {
+      background-color: rgba(199, 166, 104);
+    }
+  </style>
 </head>
 
 <body style="background-image: url(https://aforbush1.github.io/Restaurants/views/assets/img/about.jpg);">
-
-  <!-- ======= Top Bar ======= -->
-
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
       <h1 class="logo me-auto me-lg-0"><a href="/">Cuisine Compass</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " style="font-size: 25px;" href="/">Home</a></li>
-          <li><a class="nav-link scrollto" style="font-size: 25px;" href="/#about">About</a></li>
-          <li><a href="/viewRestaurants">View Restaurants</a></li>
-          <li><a href="/addRestaurants">Add Restaurants</a></li>
-
+          <li><a class="nav-link scrollto" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/viewRestaurants">View Restaurants</a></li>
+          <li><a class="nav-link scrollto" href="/addRestaurants">Add Restaurants</a></li>
+        </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <main id="main">
     <br><br><br><br>
     <form id="createUserForm" action="/submitLogin" method="post">
-        <fieldset>
-            <legend>Login</legend>
-            <label for="username">Username:
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </label>
-            <label for="password">Password:
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </label>
-            <button type="submit" id="submit" >Log-In</button>
-            <br><br>
-        </fieldset>
+      <fieldset>
+        <legend>Login</legend>
+        <label for="username">Username:
+          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </label>
+        <label for="password">Password:
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </label>
+        <button type="submit" id="submit">Log In</button>
+        <br><br>
+      </fieldset>
     </form>
-  </main><!-- End #main -->
-
-
+  </main>
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
