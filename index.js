@@ -38,7 +38,7 @@ app.get("/addRestaurants", (req, res) => {
 });
 
 app.post("/addRestaurants", (req, res) => {
-    knex("restaurants").insert({Rest_Location: req.body.Rest_Location, Rest_Rating: req.body.Rest_Rating, Rest_Link: req.body.Rest_Link, Rest_Dietary_Description: req.body.Rest_Dietary_Description, Rest_Name: req.body.Rest_Name}).then(myRestaurants => {
+    knex("restaurants").insert({Rest_Location: req.body.Rest_Location, Rest_Rating: req.body.Rest_Rating, Rest_Link: req.body.Rest_Link, Rest_Dietary_Description: req.body.Rest_Dietary_Description, Rest_Name: req.body.Rest_Name}).then(restaurants => {
         res.render("viewRestaurants", {myRestaurants: restaurants});
     }).catch(err => {
         console.log(err);
@@ -107,7 +107,7 @@ app.get("/login", (req, res) => {
 })
 
 app.get("/viewRestaurants", (req, res) => {
-    knex.select().from("restaurants").then( (myRestaurants) => {
+    knex.select().from("restaurants").then( (restaurants) => {
         res.render("viewRestaurants", {myRestaurants : restaurants});
     });
 });
