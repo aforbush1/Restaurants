@@ -40,13 +40,13 @@
         </thead>
         <tbody style="font-family: Arial; font-size: 9pt;">
         <!-- Use ejs with less than sign and percent sign // adding the = pulls data -->
-        <% for (let iCount = 0; iCount < myRestaurants.length; iCount++) { %>
+        <% for (let iCount = 0; iCount < restaurants.length; iCount++) { %>
             <tr>
-                <td><%= myRestaurants[iCount].Rest_Name %></td>
-                <td><%= myRestaurants[iCount].Rest_Location %></td>
-                <td style="text-align: center;"><%= myRestaurants[iCount].Rest_Rating %></td>
-                <td><%= myRestaurants[iCount].Rest_Link %></td>
-                <td><%= myRestaurants[iCount].Rest_Dietary_Description %></td>
+                <td><%= restaurants[iCount].Rest_Name %></td>
+                <td><%= restaurants[iCount].Rest_Location %></td>
+                <td style="text-align: center;"><%= restaurants[iCount].Rest_Rating %></td>
+                <td><%= restaurants[iCount].Rest_Link %></td>
+                <td><%= restaurants[iCount].Rest_Dietary_Description %></td>
             </tr>
         <% } %>
         </tbody>
