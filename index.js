@@ -38,10 +38,7 @@ app.get("/addRestaurants", (req, res) => {
 
 app.post("/addRestaurants", (req, res) => {
     knex("restaurants").insert({Rest_Name: req.body.Rest_Name, Rest_Location: req.body.Rest_Location, Rest_Rating: req.body.Rest_Rating, Rest_Link: req.body.Rest_Link, Rest_Dietary_Description: req.body.Rest_Dietary_Description}).then(myRestaurants => {
-        res.render("viewRestaurants");
-    }).catch(err => {
-        console.log(err);
-        res.status(500).json({err});
+        res.render("displayRestaurants");
     });
 });
 
