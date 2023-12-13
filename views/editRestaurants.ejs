@@ -83,7 +83,15 @@
         <input type="text" id="Rest_Link" name="Rest_Link" value="<%= myRestaurants[0].Rest_Link %>">
         <br><br>
         <label for="Rest_Dietary_Description">Dietary Description:</label>
-        <input type="text" id="Rest_Dietary_Description" name="Rest_Dietary_Description" value="<%= myRestaurants[0].Rest_Dietary_Description %>">
+                <select id="Rest_Dietary_Description" name="Rest_Dietary_Description" required>
+                    <option value="" disabled selected>Select a Dietary Description</option>
+                    <option value="Gluten-free">Gluten-free</option>
+                    <option value="Lactose Intolerant">Lactose Intolerant</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Paleo">Paleo</option>
+                    <option value="Low-carb">Low-carb</option>
+                </select>
         <br><br>
         <button type="submit">Save</button>
       </fieldset>
