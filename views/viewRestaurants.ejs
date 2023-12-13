@@ -1,46 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>View Restaurants</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/img/favicon.png" rel="icon">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/css/style.css" rel="stylesheet">
 </head>
-<body>
-    <div id="topbar" class="d-flex align-items-center fixed-top">
-        <div class="container d-flex justify-content-center justify-content-md-between">
-    
-          <div class="contact-info d-flex align-items-center">
+
+<body style="background-image: url(https://aforbush1.github.io/Restaurants/views/assets/img/events-bg.jpg); background-size: cover;">
+
+<!--
+<div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+        <div class="contact-info d-flex align-items-center">
             <i class="bi bi-phone d-flex align-items-center"><span>rhawk7@byu.edu</span></i>
-          </div>
-    
-          <div class="languages d-none d-md-flex align-items-center">
+        </div>
+
+        <div class="languages d-none d-md-flex align-items-center">
             <ul>
                 <li><a href="/">Return Home</a></li>
                 <li><a href="/viewRestaurants">View Restaurants</a></li>
                 <li><a href="/addRestaurants">Add Restaurants</a></li>
                 <li><a href="/login">Log In</a></li>
             </ul>
-          </div>
         </div>
     </div>
+</div>
+-->
+
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+            <h1 class="logo me-auto me-lg-0"><a href="/">Cuisine Compass</a></h1>
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a href="/viewRestaurants">View Restaurants</a></li>
+                    <li><a href="/addRestaurants">Add Restaurants</a></li>
+                    <li><a href="/login">Log In</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
 
     <label><b>Restaurant Information: </b></label>
     <br><br>
     <table style="width: 100%; background-color: antiquewhite; border: 1px solid black;">
         <thead style="background-color: cornflowerblue; color: white;">
-        <tr>
-            <th style="text-align: left;">Name</th>
-            <th style="text-align: left;">Location</th>
-            <th style="text-align: left;">Rating</th>
-            <th style="text-align: left;">Website Link</th>
-            <th style="text-align: left;">Dietary Description</th>
-            <th></th>
-            <th></th>
-        </tr>
+            <tr>
+                <th style="text-align: left;">Name</th>
+                <th style="text-align: left;">Location</th>
+                <th style="text-align: left;">Rating</th>
+                <th style="text-align: left;">Website Link</th>
+                <th style="text-align: left;">Dietary Description</th>
+                <th></th>
+                <th></th>
+            </tr>
         </thead>
         <tbody style="font-family: Arial; font-size: 9pt;">
-        <!-- Use ejs with less than sign and percent sign // adding the = pulls data -->
-        <% for (let iCount = 0; iCount < myRestaurants.length; iCount++) { %>
+            <!-- Use ejs with less than sign and percent sign // adding the = pulls data -->
+            <% for (let iCount = 0; iCount < myRestaurants.length; iCount++) { %>
             <tr>
                 <td><%= myRestaurants[iCount].Rest_Name %></td>
                 <td><%= myRestaurants[iCount].Rest_Location %></td>
@@ -48,7 +91,7 @@
                 <td><%= myRestaurants[iCount].Rest_Link %></td>
                 <td><%= myRestaurants[iCount].Rest_Dietary_Description %></td>
             </tr>
-        <% } %>
+            <% } %>
         </tbody>
     </table>
     <br><br>
@@ -56,4 +99,5 @@
         <button type="submit">Add Restaurant</button>
     </form>
 </body>
+
 </html>

@@ -1,96 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Restaurants</title>
     <meta content="" name="description">
-  <meta content="" name="keywords">
+    <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="https://raw.githubusercontent.com/aforbush1/Restaurants/views/assets/img/favicon.png" rel="icon">
-  <link href="https://raw.githubusercontent.com/aforbush1/Restaurants/views/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="https://raw.githubusercontent.com/aforbush1/Restaurants/views/assets/img/favicon.png" rel="icon">
+    <link href="https://raw.githubusercontent.com/aforbush1/Restaurants/views/assets/img/apple-touch-icon.png"
+        rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/animate.css/animate.min.css"
+        rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+        rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/boxicons/css/boxicons.min.css"
+        rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/glightbox/css/glightbox.min.css"
+        rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/swiper/swiper-bundle.min.css"
+        rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/css/style.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/css/style.css" rel="stylesheet">
 
-  <style>
-    #formContainer {
-        border-radius: 0;
-        padding-top: 100px;
-    }
+    <style>
+        #formContainer {
+            border-radius: 0;
+            padding-top: 100px;
+        }
 
-    #createRestaurant {
-      background-color: rgba(26, 24, 20, 0.9);
-      border-radius: 0;
-    }
+        #createRestaurant {
+            background-color: rgba(26, 24, 20, 0.9);
+            border-radius: 0;
+        }
 
-    #restaurantSubmit {
-      color: #ffffff;
-      padding: 10px 20px;
-      border: 2px solid #c7a668;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: rgba(199, 166, 104, 0);
-      transition: background-color 0.3s;
-    }
+        #restaurantSubmit {
+            color: #ffffff;
+            padding: 10px 20px;
+            border: 2px solid #c7a668;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: rgba(199, 166, 104, 0);
+            transition: background-color 0.3s;
+        }
 
-    #restaurantSubmit:hover {
-      background-color: rgba(199, 166, 104);
-    }
-  </style>
+        #restaurantSubmit:hover {
+            background-color: rgba(199, 166, 104);
+        }
+    </style>
 </head>
 
 <body style="background-image: url(https://aforbush1.github.io/Restaurants/views/assets/img/events-bg.jpg); background-size: cover;">
-  
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-      <h1 class="logo me-auto me-lg-0"><a href="/">Cuisine Compass</a></h1>
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="/">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a href="/viewRestaurants">View Restaurants</a></li>
-          <li><a href="/addRestaurants">Add Restaurants</a></li>
-          <li><a href="/login">Log In</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
-  </header>
-  <div id="formContainer">
-      <form id="createRestaurant" action="/addRestaurants" method="post">
-        <fieldset>
-          <label for="Rest_Name">Enter Restaurant Name: </label>
-          <input type="text" id="Rest_Name" name="Rest_Name">
-          <br><br>
-          <label for="Rest_Location">Enter Location: </label>
-          <input type="text" id="Rest_Location" name="Rest_Location">
-          <br><br>
-          <label for="Rest_Rating">Enter Rating: </label>
-          <input type="text" id="Rest_Rating" name="Rest_Rating">
-          <br><br>
-          <label for="Rest_Link">Enter Link: </label>
-          <input type="text" id="Rest_Link" name="Rest_Link">
-          <br><br>
-          <label for="Rest_Dietary_Description">Enter Dietary Description: </label>
-          <input type="text" id="Rest_Dietary_Description" name="Rest_Dietary_Description">
-          <br><br>
-          <input type="submit" id="restaurantSubmit"value="Save Restaurant">
-        </fieldset>
-      </form>
+
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+            <h1 class="logo me-auto me-lg-0"><a href="/">Cuisine Compass</a></h1>
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a href="/viewRestaurants">View Restaurants</a></li>
+                    <li><a href="/addRestaurants">Add Restaurants</a></li>
+                    <li><a href="/login">Log In</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
+
+    <div id="formContainer">
+        <form id="createRestaurant" action="/addRestaurants" method="post">
+            <fieldset>
+                <label for="Rest_Name">Enter Restaurant Name: </label>
+                <input type="text" id="Rest_Name" name="Rest_Name">
+                <br>
+                <label for="Rest_Location">Enter Location: </label>
+                <input type="text" id="Rest_Location" name="Rest_Location">
+                <br>
+                <label for="Rest_Rating">Enter Rating: </label>
+                <input type="text" id="Rest_Rating" name="Rest_Rating">
+                <br>
+                <label for="Rest_Link">Enter Link: </label>
+                <input type="text" id="Rest_Link" name="Rest_Link">
+                <br>
+                <label for="Rest_Dietary_Description">Enter Dietary Description: </label>
+                <input type="text" id="Rest_Dietary_Description" name="Rest_Dietary_Description">
+                <br>
+                <input type="submit" id="restaurantSubmit" value="Save Restaurant">
+            </fieldset>
+        </form>
     </div>
 </body>
+
 </html>
