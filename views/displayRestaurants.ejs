@@ -72,14 +72,7 @@
       button:hover {
           background-color: rgba(199, 166, 104);
       }
-      form button {
-        padding: 0; /* Remove padding */
-        font-size: 12px; /* Adjust font size */
-        border: 1px solid #ccc; /* Add a border */
-        background-color: #f0f0f0; /* Change background color */
-        border-radius: 3px; /* Add some border radius */
-        cursor: pointer;
-    }
+
   </style>
 </head>
 
@@ -122,14 +115,12 @@
                 <td><%= myRestaurants[iCount].Rest_Link %></td>
                 <td><%= myRestaurants[iCount].Rest_Dietary_Description %></td>
                 <td style="text-align: center;">
-                    <form action="/editRestaurants/<%= myRestaurants[iCount].Rest_ID %>" method="GET">
-                        <button type="submit">Edit</button>
-                    </form>
+                    <button type="submit" onclick="editRestaurant('<%= myRestaurants[iCount].Rest_ID %>')">Edit</button>
+
                 </td>
                 <td style="text-align: center;">
-                    <form action="/deleteRestaurants/<%= myRestaurants[iCount].Rest_ID %>" method="POST">
-                        <button type="submit">Delete</button>
-                    </form>
+                    <button onclick="deleteRestaurant('<%= myRestaurants[iCount].Rest_ID %>')">Delete</button>
+
                 </td>
             </tr>
         <% } %>
@@ -146,5 +137,35 @@
 
   <!-- Template Main JS File -->
   <script src="https://aforbush1.github.io/Restaurants/views/assets/js/main.js"></script>
+
+  <script>
+    function editRestaurant(restaurantId) {
+      // Redirect to the edit URL with the specified restaurant ID
+      window.location.href = "/editRestaurants/" + restaurantId;
+    }
+
+    function deleteRestaurant(restaurantId) {
+    // Create a form element dynamically
+    var form = document.createElement("form");
+    form.action = "/deleteRestaurants/" + restaurantId;
+    form.method = "POST";
+
+    // Create a hidden input field to mimic the behavior of the submit button
+    var hiddenInput = document.createElement("input");
+    hiddenInput.type = "hidden";
+    hiddenInput.name = "delete"; // This name should match the expected parameter in the server
+    hiddenInput.value = "true";
+
+    // Append the hidden input to the form
+    form.appendChild(hiddenInput);
+
+    // Append the form to the body
+    document.body.appendChild(form);
+
+    // Submit the form
+    form.submit();
+  }
+  </script>
+  
 </body>
 </html>
