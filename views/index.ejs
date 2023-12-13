@@ -29,30 +29,34 @@
   <link href="https://aforbush1.github.io/Restaurants/views/assets/css/style.css" rel="stylesheet">
 
   <style>
-    .image-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
 
-    .image-container a {
-      position: relative;
-      flex: 0 0 30%;
-      margin: 0 1.33%;
-      display: block;
-      overflow: hidden;
-    }
 
-    .image-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-      opacity: 1;
-      z-index: 1;
-    }
+/* Add margin to the bottom of the third image */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.image-container a {
+  position: relative;
+  flex: 0 0 30%;
+  margin: 0 1.33%;
+  display: block;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+
+
   </style>
 </head>
 
@@ -121,9 +125,12 @@
       <br><br>
       <div class="image-container">
         <a href="/filterRestaurants?preference=glutenFree"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/GlutenFree.jpg"></a>
-        <a href="/filterRestaurants?preference=lactoseIntollerant"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/LactoseIntollerant.jpg"></a>
+        <a href="/filterRestaurants?preference=lactoseIntollerant"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/LactoseIntolerant.jpg"></a>
         <a href="/filterRestaurants?preference=vegetarian"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Vegetarian.jpg"></a>
-        <a href="/filterRestaurants?preference=vegan"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Vegan.jpg"></a>
+      </div>
+      <br><br>
+      <div class="image-container">
+        <a href="/filterRestaurants?preference=vegan"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Vegan.jpeg"></a>
         <a href="/filterRestaurants?preference=paleo"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Paleo.jpg"></a>
         <a href="/filterRestaurants?preference=lowCarb"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Low-carb.jpg"></a>
       </div>
