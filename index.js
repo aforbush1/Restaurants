@@ -112,25 +112,16 @@ app.get("/viewRestaurants", (req, res) => {
     });
 });
 
-const _ = require('lodash');
-
-app.get("/filterRestaurants", (req, res) => {
-    let preference = req.query.preference;
-
-    // Convert preference to title case using lodash
-    preference = _.startCase(_.toLower(preference));
-
+app.get("/filterRestaurants",(req,res) => {
+    preference= req.query.preference
     knex.select()
-        .from("restaurants")
-        .where("Rest_Dietary_Description", preference)
-        .then(filteredRestaurants => {
-            res.render('viewRestaurants', { restaurants: filteredRestaurants });
+    .from("restaurants")
+    .where("Rest_Dietary_Description", preference)
+    .then (filteredRestaurants =>
+        {
+        res.render('viewRestaurants', { restaurants: filteredRestaurants });
         })
-        .catch(error => {
-            console.error(error);
-            res.status(500).send("Internal Server Error");
-        });
-});
-
+    
+})
 
 app.listen(port, () => console.log("Server is listening"));
