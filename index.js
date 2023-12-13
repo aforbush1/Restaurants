@@ -113,7 +113,8 @@ app.get("/viewRestaurants", (req, res) => {
 });
 
 app.get("/filterRestaurants",(req,res) => {
-    preference= req.params.
+    glutenFree= req.query.glutenFree
+    lactoseIntollerant=req.query.lactoseIntollerant
     knex.select()
     .from("restaurants")
     .where 
