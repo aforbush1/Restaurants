@@ -113,9 +113,10 @@ app.get("/viewRestaurants", (req, res) => {
 });
 
 app.get("/filterRestaurants",(req,res) => {
+    preference= req.params.
     knex.select()
     .from("restaurants")
-    .where
+    .where 
 })
 
 app.listen(port, () => console.log("Server is listening"));
