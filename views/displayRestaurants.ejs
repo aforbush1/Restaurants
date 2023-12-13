@@ -29,79 +29,54 @@
     <!-- Template Main CSS File -->
     <link href="https://aforbush1.github.io/Restaurants/views/assets/css/style.css" rel="stylesheet">
     <style>
-        #formContainer {
-    border-radius: 0;
-    padding-top: 100px;
+      #formContainer {
+  border-radius: 0;
+  padding-top: 100px;
 }
 
-    /* Table Styles */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: antiquewhite;
-        border: 1px solid black;
-        margin-top: 20px;
-    }
+  /* Table Styles */
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: antiquewhite;
+      border: 1px solid black;
+      margin-top: 20px;
+  }
 
-    th, td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid black;
-    }
+  th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid black;
+  }
 
-    thead {
-        background-color: rgba(26, 24, 20);
-        color: white;
-    }
+  thead {
+      background-color: rgba(26, 24, 20);
+      color: white;
+  }
 
-    /* Alternating row colors for better readability */
-    tbody tr:nth-child(even) {
-        background-color: grey;
-    }
+  /* Alternating row colors for better readability */
+  tbody tr:nth-child(even) {
+      background-color: grey;
+  }
 
-    /* Button Styles */
-    button {
-        padding: 10px 20px;
-        font-size: 14px;
-        border: none;
-        background-color: #007bff;
-        color: white;
-        cursor: pointer;
-        border-radius: 5px;
-    }
+  /* Button Styles */
+  button {
+          color: #ffffff;
+          padding: 10px 20px;
+          border: 2px solid #c7a668;
+          border-radius: 5px;
+          cursor: pointer;
+          background-color: rgba(199, 166, 104, 0);
+          transition: background-color 0.3s;
+      }
 
-    button:hover {
-        background-color: #0056b3;
-    }
-    table tbody tr {
-        height: 10px; /* Adjust this value as needed */
-        font-size: 12px; /* Adjust font size as needed */
-    }
-    </style>
+      button:hover {
+          background-color: rgba(199, 166, 104);
+      }
+  </style>
 </head>
 
 <body style="background-image: url(https://aforbush1.github.io/Restaurants/views/assets/img/events-bg.jpg); background-size: cover;">
-
-<!--
-<div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-
-        <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-phone d-flex align-items-center"><span>rhawk7@byu.edu</span></i>
-        </div>
-
-        <div class="languages d-none d-md-flex align-items-center">
-            <ul>
-                <li><a href="/">Return Home</a></li>
-                <li><a href="/viewRestaurants">View Restaurants</a></li>
-                <li><a href="/addRestaurants">Add Restaurants</a></li>
-                <li><a href="/login">Log In</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
--->
-
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
             <h1 class="logo me-auto me-lg-0"><a href="/">Cuisine Compass</a></h1>
@@ -117,7 +92,9 @@
     <br><br><br><br><br><br>
     <label><b>Restaurant Information: </b></label>
     <br><br>
-    <table style="width: 100%; background-color: #555555; border: 1px solid black;">
+
+    <div id="formContainer">
+    <table style="width: 100%; background-color: #555555; border: 1px solid black; padding: 100px;">
         <thead style="background-color: black; color: white;">
         <tr>
             <th style="text-align: left;">Name</th>
@@ -152,6 +129,7 @@
         <% } %>
         </tbody>
     </table>
+  </div>
     <br><br>
 
     <script src="https://aforbush1.github.io/Restaurants/views/assets/vendor/aos/aos.js"></script>
