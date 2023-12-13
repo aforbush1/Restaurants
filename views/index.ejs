@@ -1,5 +1,3 @@
-<!-- Authors: Adam Forbush, Chris Fowler, Ryan Hawkins, Joshua Thatcher -->
-<!-- Project 3. IS403 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,20 +31,26 @@
   <style>
     .image-container {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .image-container a {
-      flex: 1;
-      margin-right: 10px; 
-      max-width: 150px; 
+      position: relative;
+      flex: 0 0 30%;
+      margin: 0 1.33%;
+      display: block;
+      overflow: hidden;
     }
 
     .image-container img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
-      display: block; 
-      opacity: 1; 
+      display: block;
+      opacity: 1;
       z-index: 1;
     }
   </style>
@@ -111,19 +115,19 @@
             <p>
               Start participating today to start learning about great new places to eat without spending so much time searching!
             </p>          
+          </div>
         </div>
       </div>
       <br><br>
+      <div class="image-container">
+        <a href="/filterRestaurants?preference=glutenFree"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/GlutenFree.jpg"></a>
+        <a href="/filterRestaurants?preference=lactoseIntollerant"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/LactoseIntollerant.jpg"></a>
+        <a href="/filterRestaurants?preference=vegetarian"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Vegetarian.jpg"></a>
+        <a href="/filterRestaurants?preference=vegan"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Vegan.jpg"></a>
+        <a href="/filterRestaurants?preference=paleo"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Paleo.jpg"></a>
+        <a href="/filterRestaurants?preference=lowCarb"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Low-carb.jpg"></a>
       </div>
     </section><!-- End About Section -->
-    <div class="image-container">
-      <a href="/filterRestaurants?preference=glutenFree"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/GlutenFree.jpg"></a>
-      <a href="/filterRestaurants?preference=lactoseIntollerant"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/LactoseIntollerant.jpg"></a>
-      <a href="/filterRestaurants?preference=vegetarian"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Vegetarian.jpg"></a>
-      <a href="/filterRestaurants?preference=vegan"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Vegan.jpg"></a>
-      <a href="/filterRestaurants?preference=paleo"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Paleo.jpg"></a>
-      <a href="/filterRestaurants?preference=lowCarb"><img src="https://aforbush1.github.io/Restaurants/views/assets/img/Low-carb.jpg"></a>
-    </div>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
