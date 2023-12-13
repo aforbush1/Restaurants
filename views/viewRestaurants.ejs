@@ -32,6 +32,46 @@
     border-radius: 0;
     padding-top: 100px;
 }
+
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: antiquewhite;
+        border: 1px solid black;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid black;
+    }
+
+    thead {
+        background-color: rgba(26, 24, 20);
+        color: white;
+    }
+
+    /* Alternating row colors for better readability */
+    tbody tr:nth-child(even) {
+        background-color: grey;
+    }
+
+    /* Button Styles */
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
     </style>
 </head>
 
@@ -71,11 +111,11 @@
             </nav>
         </div>
     </header>
-
+    <br><br><br><br><br><br>
     <label><b>Restaurant Information: </b></label>
-    <br><br>
+    
     <div id="formContainer">
-    <table style="width: 100%; background-color: antiquewhite; border: 1px solid black; padding: 100px;">
+    <table style="width: 100%; background-color: #555555; border: 1px solid black; padding: 100px;">
         <thead style="background-color: rgba(26, 24, 20); color: white;">
             <tr>
                 <th style="text-align: left;">Name</th>
