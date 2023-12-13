@@ -112,23 +112,25 @@ app.get("/viewRestaurants", (req, res) => {
     });
 });
 
-app.get("/filterRestaurants",(req,res) => {
-    preference= req.query.preference
-    // lactoseIntollerant=req.query.lactoseIntollerant
-    // vegetarian=req.query.vegetarian
-    // vegan=req.query.vegan
-    // paleo=req.query.paleo
-    // lowCarb=req.query.lowCarb
+const _ = require('lodash');
+
+app.get("/filterRestaurants", (req, res) => {
+    let preference = req.query.preference;
+
+    // Convert preference to title case using lodash
+    preference = _.startCase(_.toLower(preference));
+
     knex.select()
-    .from("restaurants")
-    if (preference === "glutenFree")
-    {
-        knex("restaurants")
-        .where ('Rest_Dietary_Description','Gluten Free')
-    }
-    else if (preference==='lactoseIntollerant')
-    knex("restaurants")
-    .where ('Rest_Dietary_Description', 'Lactose Intollerant')
-})
+        .from("restaurants")
+        .where("Rest_Dietary_Description", preference)
+        .then(filteredRestaurants => {
+            res.render('viewRestaurants', { restaurants: filteredRestaurants });
+        })
+        .catch(error => {
+            console.error(error);
+            res.status(500).send("Internal Server Error");
+        });
+});
+
 
 app.listen(port, () => console.log("Server is listening"));
