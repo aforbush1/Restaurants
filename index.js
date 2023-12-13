@@ -113,11 +113,22 @@ app.get("/viewRestaurants", (req, res) => {
 });
 
 app.get("/filterRestaurants",(req,res) => {
-    glutenFree= req.query.glutenFree
-    lactoseIntollerant=req.query.lactoseIntollerant
+    preference= req.query.preference
+    // lactoseIntollerant=req.query.lactoseIntollerant
+    // vegetarian=req.query.vegetarian
+    // vegan=req.query.vegan
+    // paleo=req.query.paleo
+    // lowCarb=req.query.lowCarb
     knex.select()
     .from("restaurants")
-    .where 
+    if (preference === "glutenFree")
+    {
+        knex("restaurants")
+        .where ('Rest_Dietary_Description','Gluten Free')
+    }
+    else if (preference==='lactoseIntollerant')
+    knex("restaurants")
+    .where ('Rest_Dietary_Description', 'Lactose Intollerant')
 })
 
 app.listen(port, () => console.log("Server is listening"));
