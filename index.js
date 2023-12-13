@@ -113,7 +113,7 @@ app.get("/viewRestaurants", (req, res) => {
 });
 
 app.get("/filterRestaurants",(req,res) => {
-    preference= req.query.preference
+    const preference= req.query.preference
     console.log("looking for "+ preference)
     knex.select()
     .from("restaurants")
