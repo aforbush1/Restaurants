@@ -23,7 +23,6 @@
         }
 
         header {
-            background-color: #343a40;
             padding: 15px;
             text-align: center;
         }
@@ -86,16 +85,11 @@
 </head>
 
 <body>
-
-    <header id="header">
-        <!-- Header Content (if any) -->
-        Edit Restaurant
-    </header>
-
+<br><br><br>
     <main>
         <form action="/editRestaurants" method="POST">
             <fieldset>
-                <legend>Edit Restaurant:</legend>
+                <legend style="text-align: center;">Edit Restaurant</legend>
                 <input type="hidden" id="Rest_ID" name="Rest_ID" value="<%= myRestaurants[0].Rest_ID %>">
                 <label for="Rest_Name">Restaurant Name:</label>
                 <input type="text" id="Rest_Name" name="Rest_Name" value="<%= myRestaurants[0].Rest_Name %>">
