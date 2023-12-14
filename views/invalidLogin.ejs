@@ -1,0 +1,84 @@
+<!--if the user types in an invalid login, they get sent to this fun little page.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invalid Login</title>
+  <!-- Favicons -->
+  <link href="https://aforbush1.github.io/INTEX/views/assets/img/favicon.png" rel="icon">
+  <link href="https://aforbush1.github.io/INTEX/views/assets/img/favicon.png" rel="provo-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align text to the top left */
+      justify-content: flex-start; /* Align text to the top left */
+      background: url('https://aforbush1.github.io/INTEX/views/assets/img/invalidLogin.jpeg') center/cover no-repeat;
+      text-align: left;
+      color: #555; /* Grey text color */
+      padding: 20px; /* Add padding to the top and left */
+    }
+
+    .content {
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .dog-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .try-again-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+      background-color: #555;
+      border: 1px solid #555;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1; /* Ensure the button appears on top */
+    }
+
+    .try-again-button:hover {
+      background-color: #555;
+      border-color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay">
+
+    <h2 style="font-size: 60px; margin-bottom: 10px;">Invalid Credentials</h2>
+    <p style="font-size: 30px;">Please try again when you're sober.</p>
+
+    <a href="/login" class="try-again-button">Try Again</a>
+
+  </div>
+
+</body>
+
+</html>

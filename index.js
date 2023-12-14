@@ -102,6 +102,10 @@ app.post("/submitLogin", (req, res) => {
             res.render("displayRestaurants", {myRestaurants : restaurants});
         });
     }
+     else {
+        // res.render("invalidLogin");
+        res.render("invalidLogin");
+     }
 });
 
 //Renders the login page
