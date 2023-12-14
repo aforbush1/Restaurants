@@ -1,3 +1,4 @@
+<!-- This page allows the user to add a restaurant. It goes through a form where they input information and that information gets added to the database. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +9,7 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+    <!-- linking css files to use -->
     <!-- Favicons -->
     <link href="https://raw.githubusercontent.com/aforbush1/Restaurants/views/assets/img/favicon.png" rel="icon">
     <link href="https://raw.githubusercontent.com/aforbush1/Restaurants/views/assets/img/apple-touch-icon.png"
@@ -36,6 +38,7 @@
     <!-- Template Main CSS File -->
     <link href="https://aforbush1.github.io/Restaurants/views/assets/css/style.css" rel="stylesheet">
 
+    <!-- more style to use throughout the page -->
     <style>
         #formContainer {
             border-radius: 0;
@@ -72,8 +75,10 @@
     </style>
 </head>
 
+<!-- background -->
 <body style="background-image: url(https://aforbush1.github.io/Restaurants/views/assets/img/events-bg.jpg); background-size: cover;">
 
+    <!-- nav bar at the top -->
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
             <h1 class="logo me-auto me-lg-0"><a href="/">Cuisine Compass</a></h1>
@@ -89,6 +94,7 @@
         </div>
     </header>
 
+    <!-- form for them to fill out to add a restaurant -->
     <div id="formContainer">
         <form id="createRestaurant" action="/addRestaurants" method="post">
             <fieldset>
@@ -115,6 +121,7 @@
                     <option value="Low-carb">Low-carb</option>
                 </select>
                 <br><br>
+                <!-- submit button -->
                 <input type="submit" id="restaurantSubmit" value="Save Restaurant">
             </fieldset>
         </form>
