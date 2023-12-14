@@ -85,8 +85,8 @@
         <label for="Rest_Location">Location:</label>
         <input type="text" id="Rest_Location" name="Rest_Location" value="<%= myRestaurants[0].Rest_Location %>">
         <br><br>
-        <label for="Rest_Rating">Rating:</label>
-        <input type="text" id="Rest_Rating" name="Rest_Rating" value="<%= myRestaurants[0].Rest_Rating %>">
+        <label for="Rest_Rating">Enter Rating: </label>
+        <input type="number" id="Rest_Rating" name="Rest_Rating" step="0.1" min="0" max="5" value="<%= myRestaurants[0].Rest_Rating %>">
         <br><br>
         <label for="Rest_Link">Website:</label>
         <input type="text" id="Rest_Link" name="Rest_Link" value="<%= myRestaurants[0].Rest_Link %>">
