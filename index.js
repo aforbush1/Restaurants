@@ -118,9 +118,9 @@ app.get("/filterRestaurants",(req,res) => {
     knex.select()
     .from("restaurants")
     .where("Rest_Dietary_Description", preference)
-    .then (myRestaurants =>
+    .then (restaurants =>
         {
-        res.render('viewRestaurants', { restaurants: myRestaurants });
+        res.render('viewRestaurants', { myRestaurants: restaurants });
         })
     
 })
