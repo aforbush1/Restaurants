@@ -1,3 +1,4 @@
+<!-- this page allows the admin to manually edit the restarant. They can change the rating, the webpage, etc.-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,6 +88,8 @@
 <body>
 <br><br><br>
     <main>
+        <!--this form uses ejs to dynamically generate the information from the website on the database. 
+        When they submit the form, the editRestaurants route is called and the database is updated accordingly-->
         <form action="/editRestaurants" method="POST">
             <fieldset>
                 <legend style="text-align: center;">Edit Restaurant</legend>
