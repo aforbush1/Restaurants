@@ -29,28 +29,9 @@
     <!-- Template Main CSS File -->
     <link href="https://aforbush1.github.io/Restaurants/views/assets/css/style.css" rel="stylesheet">
     <style>
-
-body {
-    position: relative;
-    background-image: url(https://aforbush1.github.io/Restaurants/views/assets/img/events-bg.jpg);
-    background-size: cover;
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the darkness of the overlay */
-    z-index: -1;
-}
-
-
         #formContainer {
     border-radius: 0;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
     /* Table Styles */
@@ -94,16 +75,13 @@ body::before {
             background-color: rgba(199, 166, 104);
         }
 
-
-
-
 /* Add margin to the bottom of the third image */
 .image-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
 .image-container a {
@@ -127,7 +105,7 @@ body::before {
     </style>
 </head>
 
-<body style="background-image: url(https://aforbush1.github.io/Restaurants/views/assets/img/events-bg.jpg); background-size: cover;">
+<body style="background-image: url(https://aforbush1.github.io/Restaurants/views/assets/img/events-bg.jpg);">
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
             <h1 class="logo me-auto me-lg-0"><a href="/">Cuisine Compass</a></h1>
@@ -142,7 +120,7 @@ body::before {
             </nav>
         </div>
     </header>
-    <br>
+    <br><br><br><br><br>
 
     <label><b>Restaurant Information: </b></label>
     <div class="image-container">
@@ -186,7 +164,6 @@ body::before {
     <form action="/addRestaurants" method="GET">
         <button type="submit">Add Restaurant</button>
     </form>
-
 
 </body>
 
