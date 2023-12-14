@@ -1,3 +1,5 @@
+<!-- this page allows the admin that logins to see all the data that has been entered -->
+<!-- the admin can alseo edit and delete entries that were made -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +7,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <!-- title -->
     <title>View Restaurants</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+    <!-- css files -->
     <!-- Favicons -->
     <link href="https://aforbush1.github.io/Restaurants/views/assets/img/favicon.png" rel="icon">
     <link href="https://aforbush1.github.io/Restaurants/views/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -27,7 +31,9 @@
 
     <!-- Template Main CSS File -->
     <link href="https://aforbush1.github.io/Restaurants/views/assets/css/style.css" rel="stylesheet">
-    <style>
+   
+   <!-- extra styles for this page -->
+   <style>
         #formContainer {
             border-radius: 0;
             padding-top: 20px;
@@ -74,6 +80,7 @@
     </style>
 </head>
 
+<!-- simplified nav bar for the admin page to be able to log out -->
 <body style="background-image: url(https://aforbush1.github.io/Restaurants/views/assets/img/events-bg.jpg); background-size: cover;">
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
@@ -88,6 +95,7 @@
     </header>
     <br><br><br><br>
 
+    <!-- table to view the data -->
     <table style="width: 100%; background-color: #555555; border: 1px solid black;">
         <thead style="background-color: black; color: white;">
             <tr>
@@ -102,6 +110,7 @@
         </thead>
         <tbody style="font-family: Arial; font-size: 9pt;">
             <!-- Use ejs with less than sign and percent sign // adding the = pulls data -->
+            <!-- showing the data in from the database -->
             <% for (let iCount = 0; iCount < myRestaurants.length; iCount++) { %>
                 <tr>
                     <td><%= myRestaurants[iCount].Rest_Name %></td>
@@ -109,6 +118,7 @@
                     <td style="text-align: center;"><%= myRestaurants[iCount].Rest_Rating %></td>
                     <td><%= myRestaurants[iCount].Rest_Link %></td>
                     <td><%= myRestaurants[iCount].Rest_Dietary_Description %></td>
+                    <!-- edit and delete restaurants buttons -->
                     <td style="text-align: center;">
                         <button type="submit" onclick="editRestaurant('<%= myRestaurants[iCount].Rest_ID %>')">Edit</button>
                     </td>
@@ -131,6 +141,7 @@
     <!-- Template Main JS File -->
     <script src="https://aforbush1.github.io/Restaurants/views/assets/js/main.js"></script>
 
+    <!-- functions to make the edit and delete buttons work more effectively so that we could have the css on it that we wanted -->
     <script>
         function editRestaurant(restaurantId) {
             // Redirect to the edit URL with the specified restaurant ID
