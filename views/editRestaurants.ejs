@@ -2,96 +2,110 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit Restaurant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Restaurant</title>
 
-  <!-- Vendor CSS Files -->
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Your Custom CSS Styles -->
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-image: url('https://aforbush1.github.io/Restaurants/views/assets/img/about.jpg');
-      background-size: cover;
-      color: #fff;
-    }
-
-    form {
-      background-color: rgba(26, 24, 20, 0.9);
-      padding: 20px;
-      border-radius: 5px;
-      max-width: 500px;
-      margin: 50px auto;
-    }
-
-    label {
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: calc(100% - 22px);
-      padding: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #c7a668;
-      border-radius: 5px;
-      background-color: transparent;
-      color: #fff;
-    }
-
-    button[type="submit"] {
-      color: #ffffff;
-      padding: 10px 20px;
-      border: 2px solid #c7a668;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: rgba(199, 166, 104, 0);
-      transition: background-color 0.3s;
-    }
-
-    button[type="submit"]:hover {
-      background-color: rgba(199, 166, 104);
-    }
-
-    select {
-          width: 100%;
-          padding: 8px;
-          margin-bottom: 16px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
+    <!-- Your Custom CSS Styles -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-image: url('https://aforbush1.github.io/Restaurants/views/assets/img/about.jpg');
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-  </style>
+
+        header {
+            background-color: #343a40;
+            padding: 15px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgba(26, 24, 20, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        legend {
+            color: #c7a668;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+            color: #c7a668;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #c7a668;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            color: #ffffff;
+            padding: 10px 20px;
+            border: 2px solid #c7a668;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: rgba(199, 166, 104, 0);
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: rgba(199, 166, 104);
+        }
+    </style>
 </head>
 
 <body>
 
-  <header id="header" class="fixed-top d-flex align-items-cente">
-    <!-- Header Content (if any) -->
-  </header>
+    <header id="header">
+        <!-- Header Content (if any) -->
+        Edit Restaurant
+    </header>
 
-  <main id="main">
-    <form action="/editRestaurants" method="POST">
-      <fieldset>
-        <legend style="color: #c7a668;">Edit Restaurant:</legend>
-        <input type="hidden" id="Rest_ID" name="Rest_ID" value="<%= myRestaurants[0].Rest_ID %>">
-        <label for="Rest_Name">Restaurant Name:</label>
-        <input type="text" id="Rest_Name" name="Rest_Name" value="<%= myRestaurants[0].Rest_Name %>">
-        <br><br>
-        <label for="Rest_Location">Location:</label>
-        <input type="text" id="Rest_Location" name="Rest_Location" value="<%= myRestaurants[0].Rest_Location %>">
-        <br><br>
-        <label for="Rest_Rating">Enter Rating: </label>
-        <input type="number" id="Rest_Rating" name="Rest_Rating" step="0.1" min="0" max="5" value="<%= myRestaurants[0].Rest_Rating %>">
-        <br><br>
-        <label for="Rest_Link">Website:</label>
-        <input type="text" id="Rest_Link" name="Rest_Link" value="<%= myRestaurants[0].Rest_Link %>">
-        <br><br>
-        <label for="Rest_Dietary_Description">Dietary Description:</label>
+    <main>
+        <form action="/editRestaurants" method="POST">
+            <fieldset>
+                <legend>Edit Restaurant:</legend>
+                <input type="hidden" id="Rest_ID" name="Rest_ID" value="<%= myRestaurants[0].Rest_ID %>">
+                <label for="Rest_Name">Restaurant Name:</label>
+                <input type="text" id="Rest_Name" name="Rest_Name" value="<%= myRestaurants[0].Rest_Name %>">
+                <label for="Rest_Location">Location:</label>
+                <input type="text" id="Rest_Location" name="Rest_Location" value="<%= myRestaurants[0].Rest_Location %>">
+                <label for="Rest_Rating">Enter Rating: </label>
+                <input type="number" id="Rest_Rating" name="Rest_Rating" step="0.1" min="0" max="5" value="<%= myRestaurants[0].Rest_Rating %>">
+                <label for="Rest_Link">Website:</label>
+                <input type="text" id="Rest_Link" name="Rest_Link" value="<%= myRestaurants[0].Rest_Link %>">
+                <label for="Rest_Dietary_Description">Dietary Description:</label>
                 <select id="Rest_Dietary_Description" name="Rest_Dietary_Description" required>
                     <option value="Gluten-free">Gluten-free</option>
                     <option value="Lactose Intolerant">Lactose Intolerant</option>
@@ -100,14 +114,13 @@
                     <option value="Paleo">Paleo</option>
                     <option value="Low-carb">Low-carb</option>
                 </select>
-        <br><br>
-        <button type="submit">Save</button>
-      </fieldset>
-    </form>
-  </main>
+                <button type="submit">Save</button>
+            </fieldset>
+        </form>
+    </main>
 
-  <!-- Vendor JS Files -->
-  <script src="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="https://aforbush1.github.io/Restaurants/views/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
